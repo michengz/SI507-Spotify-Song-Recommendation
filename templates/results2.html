@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8"/>
+    <title>Music Recommendation Results</title>
+</head>
+<body>
+    <h1>Here are some information about the recent top tracks:</h1>
+    <h3>Top 10 on Last.FM Charts</h3>
+    <table> 
+        <thead>
+            <tr>
+            <th>Ranking</th>
+            <th>Track Name</th>
+            <th>Artist</th>
+            <th>Album</th>
+            <th>Release Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for track in top10_lst %}
+            <tr>
+            <td>{{track['Rank']}}</td>
+            <td>{{track['Track']}}</td>
+            <td>{{track['Artist']}}</td>
+            <td>{{track['Album']}}</td>
+            <td>{{track['Release Date']}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table><br/><br/> 
+    <h3>Popularity on Spotify</h3>
+    <p>{{plot_div1 | safe}}</p><br/><br/> 
+    <h3>Average Audio Features</h3>
+    <p>{{plot_div2 | safe}}</p>
+</body>
+</html>

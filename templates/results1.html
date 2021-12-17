@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8"/>
+    <title>Music Recommendation Results</title>
+</head>
+<body>
+    <h1>Here are your recommendation results:</h1>
+    <p>Refresh the page if you are not satisfied with the results.</p>
+    <p>{{result_list[0]}}</p>
+    <p>{{result_list[1]}}</p>
+    <p>{{result_list[2]}}</p>
+    <p>{{result_list[3]}}</p>
+    <p>{{result_list[4]}}</p>
+    <p>{{result_list[5]}}</p>
+    <p>{{result_list[6]}}</p>
+    <p>{{result_list[7]}}</p>
+    <p>{{result_list[8]}}</p>
+    <p>{{result_list[9]}}</p>
+    <form action='/plot1' method='POST'>
+        <p>
+            Select track to get detailed info: 
+            <select name="track">
+                    <option value = "0">{{result_list[0]}}</option>
+                    <option value = "1">{{result_list[1]}}</option>
+                    <option value = "2">{{result_list[2]}}</option>
+                    <option value = "3">{{result_list[3]}}</option>
+                    <option value = "4">{{result_list[4]}}</option>
+                    <option value = "5">{{result_list[5]}}</option>
+                    <option value = "6">{{result_list[6]}}</option>
+                    <option value = "7">{{result_list[7]}}</option>
+                    <option value = "8">{{result_list[8]}}</option>
+                    <option value = "9">{{result_list[9]}}</option>
+            </select>
+        </p>
+        <input type='submit' value='Get Info'/>
+    </form>
+</body>
+</html>

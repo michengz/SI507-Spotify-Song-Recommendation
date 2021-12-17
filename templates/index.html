@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8"/>
+    <title> Music Charts Recommendation Home</title>
+</head>
+<body>
+    <img src="{{url_for('static', filename='index1.png')}}" />
+    <h1>Welcome to the Music Charts Browser!</h1>
+    <p>
+        Want to get to know more about the recent top tracks/artists around the world?
+        Looking for music recommendations from the top charts?<br/> 
+        Explore the options below:
+    </p>
+    <form action="/handle_form" method="POST">
+        <p><a href="/recommendation">[1] Give me some music recommendations from the charts!</a></p>
+        <p><a href="/tracks">[2] Show me some statistics related to recent top tracks.</a></p>
+    </form>
+</body>
+</html>

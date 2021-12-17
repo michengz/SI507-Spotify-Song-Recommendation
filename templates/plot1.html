@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <meta charset="UTF8"/>
+    <title>Music Recommendation Results</title>
+</head>
+<body>
+    <h1>Here's some information about "{{track}}":</h1>
+    <p>Artist: {{artist}}</p>
+    <p>Album: {{album}}</p>
+    <p>Release Date: {{release_date}}</p>
+    <p>Popularity: {{popularity}}</p>
+    {{plot_div | safe}}
+</body>
+</html>
