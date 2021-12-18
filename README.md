@@ -14,7 +14,7 @@ To fetch real time data, a set of API keys from Last.FM and Spotify is required.
 ### Running the Main Program
 Run the "final_proj.py" file and enter [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your web browser to interact with the program.
 
-### Interactions and Data Presenations
+### Interactions and Data Presentations
 The program provides two main services:
 1. **Music recommendation**
 - Fill out and submit form to get a list of 10 personal music recommendations from the top charts
