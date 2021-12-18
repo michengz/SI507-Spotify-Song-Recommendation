@@ -27,7 +27,7 @@ The program provides two main services:
 
 # Data Structure
 All fetched data are stored in a tree with nodes that contain either questions or the actual data. There will be four yes/no questions that asks users about their preferences, which leads to 16 possible ways in total of grouping the data. The tree structure is as follows (the alphabets represent data):
-'''
+```
 tree = \
     ["Do you prefer some dance music?(Y/N)", 
         ["Do you prefer some accoustic music?(Y/N)", 
@@ -52,5 +52,5 @@ tree = \
                     [m,None,None],[n,None,None]],
                 ["Do you prefer some happy and positive music?(Y/N)",
                     [o,None,None],[p,None,None]]]]]
-'''
+```
 The data stored in each of the end nodes are lists of dictionaries that hold information about each track such as track name, artist, audio features, etc. The complete structure of the tree can be found from the "tree.json" file.
