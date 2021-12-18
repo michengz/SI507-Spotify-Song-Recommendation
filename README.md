@@ -6,6 +6,7 @@ This is a final project for the SI507 Intermediate Programming course at the Uni
 - Flask-Session
 - Plotly
 - pandas
+- requests
 
 # Instructions
 ### Obtaining Spotify and Last.FM API Keys
