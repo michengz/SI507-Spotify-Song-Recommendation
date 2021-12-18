@@ -133,6 +133,7 @@ def plot():
     track = results[selected_num]["Track"]
     artist = results[selected_num]["Artist"]
     album = results[selected_num]["Album"]
+    genre = results[selected_num]["Genre"]
     release_date = results[selected_num]["Release Date"]
     popularity = results[selected_num]["Popularity"]
     acousticness = results[selected_num]["acousticness"]
@@ -147,7 +148,7 @@ def plot():
     audio_features_str = ['acousticness','danceability','energy','instrumentalness', 'liveness', 'speechiness']
     plot_div = plotRadar(audio_features, audio_features_str)
     
-    return render_template('plot1.html', plot_div = plot_div, track = track, artist = artist, popularity = popularity, album = album, release_date = release_date)
+    return render_template('plot1.html', plot_div = plot_div, track = track, artist = artist, popularity = popularity, album = album, release_date = release_date, genre=genre)
 
 @app.route('/tracks')
 def result2():
