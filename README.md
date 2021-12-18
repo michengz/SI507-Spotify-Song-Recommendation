@@ -30,7 +30,7 @@ All fetched data are stored in a tree with nodes that contain either questions o
 ```
 tree = \
     ["Do you prefer some dance music?(Y/N)", 
-        ["Do you prefer some accoustic music?(Y/N)", 
+        ["Do you prefer some acoustic music?(Y/N)", 
             ["Do you prefer some loud and energetic music?(Y/N)", 
                 ["Do you prefer some happy and positive music?(Y/N)",
                     [a,None,None],[b,None,None]],
@@ -41,7 +41,7 @@ tree = \
                     [e,None,None],[f,None,None]],
                 ["Do you prefer some happy and positive music?(Y/N)",
                     [g,None,None],[h,None,None]]]],
-        ["Do you prefer some accoustic music?(Y/N)", 
+        ["Do you prefer some acoustic music?(Y/N)", 
             ["Do you prefer some loud and energetic music?(Y/N)",
                 ["Do you prefer some happy and positive music?(Y/N)",
                     [i,None,None],[j,None,None]],
