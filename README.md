@@ -25,7 +25,8 @@ The program provides two main features:
 - A table showing the top 10 tracks from the Last.FM charts
 - A bar chart showing their popularity ranking on Spotify
 - A radar chart showing the average numbers of their audio features  
-A brief demonstration of how the application works could be seen [here](https://www.loom.com/share/a87ac086753547ac9a418d99043073cc?sharedAppSource=personal_library).
+  
+[Here's](https://www.loom.com/share/a87ac086753547ac9a418d99043073cc?sharedAppSource=personal_library) a brief demonstration of how the application works.
 
 # Data Structure
 All fetched data are stored in a tree with nodes that contain either questions or the actual data. There will be four yes/no questions that asks users about their preferences, which leads to 16 possible ways in total of grouping the data. The tree structure is as follows (the alphabets represent data):
