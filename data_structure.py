@@ -7,70 +7,55 @@ f.close()
 lst = ['danceability', 'acousticness', 'energy', 'valence']
 
 organized_dict = {}
-a = organized_dict[f'high {lst[0]} high {lst[1]} high {lst[2]} high {lst[3]}'] = []
-b = organized_dict[f'high {lst[0]} high {lst[1]} high {lst[2]} low {lst[3]}'] = []
-c = organized_dict[f'high {lst[0]} high {lst[1]} low {lst[2]} high {lst[3]}'] = []
-d = organized_dict[f'high {lst[0]} high {lst[1]} low {lst[2]} low {lst[3]}'] = []
-e = organized_dict[f'high {lst[0]} low {lst[1]} high {lst[2]} high {lst[3]}'] = []
-f = organized_dict[f'high {lst[0]} low {lst[1]} high {lst[2]} low {lst[3]}'] = []
-g = organized_dict[f'high {lst[0]} low {lst[1]} low {lst[2]} high {lst[3]}'] = []
-h = organized_dict[f'high {lst[0]} low {lst[1]} low {lst[2]} low {lst[3]}'] = []
-i = organized_dict[f'low {lst[0]} high {lst[1]} high {lst[2]} high {lst[3]}'] = []
-j = organized_dict[f'low {lst[0]} high {lst[1]} high {lst[2]} low {lst[3]}'] = []
-k = organized_dict[f'low {lst[0]} high {lst[1]} low {lst[2]} high {lst[3]}'] = []
-l = organized_dict[f'low {lst[0]} high {lst[1]} low {lst[2]} low {lst[3]}'] = []
-m = organized_dict[f'low {lst[0]} low {lst[1]} high {lst[2]} high {lst[3]}'] = []
-n = organized_dict[f'low {lst[0]} low {lst[1]} high {lst[2]} low {lst[3]}']=  []
-o = organized_dict[f'low {lst[0]} low {lst[1]} low {lst[2]} high {lst[3]}'] = []
-p = organized_dict[f'low {lst[0]} low {lst[1]} low {lst[2]} low {lst[3]}'] = []
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p = [],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
 
 for track in json_data:
     if track[lst[0]] > 0.5:
         if track[lst[1]] > 0.5:
             if track[lst[2]] > 0.5:
-                if track[lst[3]] > 0.5:
-                    organized_dict[f'high {lst[0]} high {lst[1]} high {lst[2]} high {lst[3]}'].append(track)
+                if track[lst[3]] > 0.5:   
+                    a.append(track)
                 else:
-                    organized_dict[f'high {lst[0]} high {lst[1]} high {lst[2]} low {lst[3]}'].append(track)
+                    b.append(track)
             else:
                 if track[lst[3]] > 0.5:
-                    organized_dict[f'high {lst[0]} high {lst[1]} low {lst[2]} high {lst[3]}'].append(track)
+                    c.append(track)
                 else:
-                    organized_dict[f'high {lst[0]} high {lst[1]} low {lst[2]} low {lst[3]}'].append(track)
+                    d.append(track)
         else:
             if track[lst[2]] > 0.5:
                 if track[lst[3]] > 0.5:
-                    organized_dict[f'high {lst[0]} low {lst[1]} high {lst[2]} high {lst[3]}'].append(track)
+                    e.append(track)
                 else:
-                    organized_dict[f'high {lst[0]} low {lst[1]} high {lst[2]} low {lst[3]}'].append(track)
+                    f.append(track)
             else:
                 if track[lst[3]] > 0.5:
-                    organized_dict[f'high {lst[0]} low {lst[1]} low {lst[2]} high {lst[3]}'].append(track)
+                    g.append(track)
                 else:
-                    organized_dict[f'high {lst[0]} low {lst[1]} low {lst[2]} low {lst[3]}'].append(track)
+                    h.append(track)
     else:
         if track[lst[1]] > 0.5:
             if track[lst[2]] > 0.5:
                 if track[lst[3]] > 0.5:
-                    organized_dict[f'low {lst[0]} high {lst[1]} high {lst[2]} high {lst[3]}'].append(track)
+                    i.append(track)
                 else:
-                    organized_dict[f'low {lst[0]} high {lst[1]} high {lst[2]} low {lst[3]}'].append(track)
+                    j.append(track)
             else:
                 if track[lst[3]] > 0.5:
-                    organized_dict[f'low {lst[0]} high {lst[1]} low {lst[2]} high {lst[3]}'].append(track)
+                    k.append(track)
                 else:
-                    organized_dict[f'low {lst[0]} high {lst[1]} low {lst[2]} low {lst[3]}'].append(track)
+                    l.append(track)
         else:
             if track[lst[2]] > 0.5:
                 if track[lst[3]] > 0.5:
-                    organized_dict[f'low {lst[0]} low {lst[1]} high {lst[2]} high {lst[3]}'].append(track)
+                    m.append(track)
                 else:
-                    organized_dict[f'low {lst[0]} low {lst[1]} high {lst[2]} low {lst[3]}'].append(track)
+                    n.append(track)
             else:
                 if track[lst[3]] > 0.5:
-                    organized_dict[f'low {lst[0]} low {lst[1]} low {lst[2]} high {lst[3]}'].append(track)
+                    o.append(track)
                 else:
-                    organized_dict[f'low {lst[0]} low {lst[1]} low {lst[2]} low {lst[3]}'].append(track)
+                    p.append(track)
 
 
 with open("organized_data.json", "w") as outfile:
@@ -103,4 +88,3 @@ tree = \
 
 with open("tree.json", "w") as outfile:
         json.dump(tree, outfile)
-
